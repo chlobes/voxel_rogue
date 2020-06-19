@@ -70,8 +70,8 @@
 			<div id="stats_box">
 				<textarea id="stats" rows=20 readonly></textarea>
 			</div>
-			<div id="inventory_box">
-				<textarea id="inventory" rows=20 readonly></textarea>
+			<div id="entities_box">
+				<textarea id="entities" rows=20 cols=25 readonly></textarea>
 			</div>
 		</div>
 		<br>
@@ -79,18 +79,31 @@
 			<div id="info_box">
 				<textarea id="info" rows=15 readonly></textarea>
 			</div>
+			<div id="inventory_box">
+				<textarea id="inventory" rows=15 readonly></textarea>
+			</div>
 			<div id="interface">
+				time⠀⠀⠀⠀
+				<input id="time" type="range" min="0" max="100" value="0" class="slider">
+				<input id="time_o" type="text" value="0" /><br>
 				direction⠀
 				<input id="move_dir" type="range" min="0" max ="100" value="0" class="slider">
 				<input id="move_dir_o" type="text" value="(1, 0)" /><br>
 				max speed
 				<input id="move_speed" type="range" min="0" max ="100" value="100" class="slider">
 				<input id="move_speed_o" type="text" value="10" /><br>
-				time⠀⠀⠀⠀
-				<input id="move_time" type="range" min="0" max="100" value="0" class="slider">
-				<input id="move_time_o" type="text" value="0" /><br>
 				<label><input id="jump" type="checkbox" name="jumping">jumping</label><br>
-				<button id="move">create move action</button>
+				<button id="move">create move action</button><br>
+				<input id="cancel_o" value="0">
+				<button id="cancel">cancel selected action</button><br>
+				<label>selected entity:<input id="selected_entity"></label><br>
+				<button id="left_attack">attack (left)</button>
+				<button id="right_attack">attack (right)</button><br>
+				<label>selected item:<input id="selected_item"></label><br>
+				<label>selected equipment:<input id="selected_equip"></label><br>
+				<button id="pickup">pickup selected item</button>
+				<button id="drop">drop selected item</button>
+				<button id="equip">equip selected item</button><br>
 				<button id="ready">ready</button>
 			</div>
 			<div id="queue_box">
